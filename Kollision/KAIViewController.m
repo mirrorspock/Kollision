@@ -14,6 +14,14 @@
 
 @implementation KAIViewController
 
+-(void)PlayerMove {
+    
+    Player.center = CGPointMake(Player.center.x, Player.center.y + Y);
+    
+}
+
+
+
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     
     if (Start == YES) {
@@ -25,13 +33,18 @@
         timer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(PlayerMove) userInfo:Nil repeats:YES];
 
         Start = NO;
-        
     }
     
-    
-    
+    Y = -7;
+    Player.image = [UIImage imageNamed:@"KollisionPlayerUp.png"];
 }
 
+-(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
+    
+    Y = 7;
+    Player.image = [UIImage imageNamed:@"KollisionPlayerDown.png"];
+
+}
 
 
 
