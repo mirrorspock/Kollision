@@ -83,12 +83,14 @@
 
 -(void)EndGame{
     
+    if (ScoreNumber > HighScore) {
+        HighScore = ScoreNumber;
+        //save highscore
+        [[NSUserDefaults standardUserDefaults] setInteger:HighScore forKey:@"HighScoreSaved"];
+    }
     Player.hidden = YES;
     [timer invalidate];
     [Scorer invalidate];
-    
-    
-    
     
     [self performSelector:@selector(NewGame) withObject:Nil afterDelay:5];
     
@@ -126,7 +128,7 @@
     Start = YES;
     ScoreNumber = 0;
     Score.text = [NSString stringWithFormat:@"Score: 000"];
-    
+    Intro3.text = [NSString stringWithFormat:@"HighScore: %i", HighScore];
 
 }
 
@@ -337,6 +339,10 @@
     Obstacle.hidden = YES;
     Obstacle2.hidden = YES;
 
+    //load saved highscore
+    HighScore = [[NSUserDefaults standardUserDefaults] integerForKey:@"HighScoreSaved"];
+    Intro3.text = [NSString stringWithFormat:@"HighScore: %i",HighScore];
+    
     
     
     [super viewDidLoad];
