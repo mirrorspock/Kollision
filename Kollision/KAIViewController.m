@@ -14,7 +14,128 @@
 
 @implementation KAIViewController
 
+-(void)Collision{
+    
+    if (CGRectIntersectsRect(Player.frame, Obstacle.frame)) {
+        [self EndGame];
+        NSLog(@"1");
+    }
+    if (CGRectIntersectsRect(Player.frame, Obstacle2.frame)) {
+        [self EndGame];
+        NSLog(@"1");
+    }
+    if (CGRectIntersectsRect(Player.frame, Bottom1.frame)) {
+        [self EndGame];
+        NSLog(@"1");
+    }
+    if (CGRectIntersectsRect(Player.frame, Bottom2.frame)) {
+        [self EndGame];
+        NSLog(@"1");
+    }
+    if (CGRectIntersectsRect(Player.frame, Bottom3.frame)) {
+        [self EndGame];
+        NSLog(@"1");
+    }
+    if (CGRectIntersectsRect(Player.frame, Bottom4.frame)) {
+        [self EndGame];
+    }
+    if (CGRectIntersectsRect(Player.frame, Bottom5.frame)) {
+        [self EndGame];
+    }
+    if (CGRectIntersectsRect(Player.frame, Bottom6.frame)) {
+        [self EndGame];
+    }
+    if (CGRectIntersectsRect(Player.frame, Bottom7.frame)) {
+        [self EndGame];
+    }
+    if (CGRectIntersectsRect(Player.frame, Top1.frame)) {
+        [self EndGame];
+    }
+    if (CGRectIntersectsRect(Player.frame, Top2.frame)) {
+        [self EndGame];
+    }
+    if (CGRectIntersectsRect(Player.frame, Top3.frame)) {
+        [self EndGame];
+    }
+    if (CGRectIntersectsRect(Player.frame, Top4.frame)) {
+        [self EndGame];
+    }
+    if (CGRectIntersectsRect(Player.frame, Top5.frame)) {
+        [self EndGame];
+    }
+    if (CGRectIntersectsRect(Player.frame, Top6.frame)) {
+        [self EndGame];
+    }
+    if (CGRectIntersectsRect(Player.frame, Top7.frame)) {
+        [self EndGame];
+    }
+    if (Player.center.y > 241){
+        [self EndGame];
+    }
+    if (Player.center.y < 46){
+        [self EndGame];
+    }
+
+        
+    
+    
+}
+
+-(void)EndGame{
+    
+    Player.hidden = YES;
+    [timer invalidate];
+    [Scorer invalidate];
+    
+    
+    
+    
+    [self performSelector:@selector(NewGame) withObject:Nil afterDelay:5];
+    
+    
+    
+}
+
+-(void)NewGame{
+    
+    Bottom1.hidden = YES;
+    Bottom2.hidden = YES;
+    Bottom3.hidden = YES;
+    Bottom4.hidden = YES;
+    Bottom5.hidden = YES;
+    Bottom6.hidden = YES;
+    Bottom7.hidden = YES;
+    Top1.hidden = YES;
+    Top2.hidden = YES;
+    Top3.hidden = YES;
+    Top4.hidden = YES;
+    Top5.hidden = YES;
+    Top6.hidden = YES;
+    Top7.hidden = YES;
+    Obstacle.hidden = YES;
+    Obstacle2.hidden = YES;
+    
+    Intro1.hidden = NO;
+    Intro2.hidden = NO;
+    Intro3.hidden = NO;
+    
+    Player.hidden = NO;
+    Player.center = CGPointMake(57, 134);
+    Player.image = [UIImage imageNamed:@"KollisionPlayerUp.png"];
+    
+    Start = YES;
+    ScoreNumber = 0;
+    Score.text = [NSString stringWithFormat:@"Score: 000"];
+    
+
+}
+
+
+
+
 -(void)PlayerMove {
+    [self Collision];
+
     
     Player.center = CGPointMake(Player.center.x, Player.center.y + Y);
     
@@ -47,7 +168,6 @@
         RandomPosition = RandomPosition + 110;
         Obstacle2.center = CGPointMake(510, RandomPosition);
     }
-
     if (Top1.center.x < -30){
         RandomPosition = arc4random() %55;
         Top1.center = CGPointMake(510, RandomPosition);
@@ -66,7 +186,6 @@
         RandomPosition = RandomPosition + 265;
         Bottom3.center = CGPointMake(510, RandomPosition);
     }
-    
     if (Top4.center.x < -30){
         RandomPosition = arc4random() %55;
         Top4.center = CGPointMake(510, RandomPosition);
@@ -92,8 +211,13 @@
         Bottom7.center = CGPointMake(510, RandomPosition);
     }
     
+}
+
+
+-(void)Scoring{
     
-    
+    ScoreNumber = ScoreNumber + 1;
+    Score.text = [NSString stringWithFormat:@"Score: %i", ScoreNumber];
     
 }
 
@@ -107,7 +231,8 @@
         Intro2.hidden = YES;
         Intro3.hidden = YES;
         
-        timer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(PlayerMove) userInfo:Nil repeats:YES];
+        timer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(PlayerMove) userInfo:nil repeats:YES];
+        Scorer = [NSTimer scheduledTimerWithTimeInterval: 1 target:self selector:@selector(Scoring) userInfo:nil repeats:YES];
 
         Start = NO;
         Bottom1.hidden = NO;
@@ -178,6 +303,8 @@
     
     Y = -7;
     Player.image = [UIImage imageNamed:@"KollisionPlayerUp.png"];
+    
+
 }
 
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
@@ -209,6 +336,8 @@
     Top7.hidden = YES;
     Obstacle.hidden = YES;
     Obstacle2.hidden = YES;
+
+    
     
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
