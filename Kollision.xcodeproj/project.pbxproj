@@ -21,6 +21,10 @@
 		38975A1E187AB78C00C78D60 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38975A00187AB78B00C78D60 /* UIKit.framework */; };
 		38975A26187AB78C00C78D60 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 38975A24187AB78C00C78D60 /* InfoPlist.strings */; };
 		38975A28187AB78C00C78D60 /* KollisionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 38975A27187AB78C00C78D60 /* KollisionTests.m */; };
+		38DA9727187ACB2A003161C7 /* KollisionBackGround.png in Resources */ = {isa = PBXBuildFile; fileRef = 38DA9723187ACB2A003161C7 /* KollisionBackGround.png */; };
+		38DA9728187ACB2A003161C7 /* KollisionPlayerDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 38DA9724187ACB2A003161C7 /* KollisionPlayerDown.png */; };
+		38DA9729187ACB2A003161C7 /* KollisionPlayerUp.png in Resources */ = {isa = PBXBuildFile; fileRef = 38DA9725187ACB2A003161C7 /* KollisionPlayerUp.png */; };
+		38DA972A187ACB2A003161C7 /* Obstacle.png in Resources */ = {isa = PBXBuildFile; fileRef = 38DA9726187ACB2A003161C7 /* Obstacle.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,10 @@
 		38975A23187AB78C00C78D60 /* KollisionTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KollisionTests-Info.plist"; sourceTree = "<group>"; };
 		38975A25187AB78C00C78D60 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		38975A27187AB78C00C78D60 /* KollisionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KollisionTests.m; sourceTree = "<group>"; };
+		38DA9723187ACB2A003161C7 /* KollisionBackGround.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KollisionBackGround.png; sourceTree = "<group>"; };
+		38DA9724187ACB2A003161C7 /* KollisionPlayerDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KollisionPlayerDown.png; sourceTree = "<group>"; };
+		38DA9725187ACB2A003161C7 /* KollisionPlayerUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KollisionPlayerUp.png; sourceTree = "<group>"; };
+		38DA9726187ACB2A003161C7 /* Obstacle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Obstacle.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +134,10 @@
 		38975A03187AB78B00C78D60 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				38DA9723187ACB2A003161C7 /* KollisionBackGround.png */,
+				38DA9724187ACB2A003161C7 /* KollisionPlayerDown.png */,
+				38DA9725187ACB2A003161C7 /* KollisionPlayerUp.png */,
+				38DA9726187ACB2A003161C7 /* Obstacle.png */,
 				38975A04187AB78B00C78D60 /* Kollision-Info.plist */,
 				38975A05187AB78B00C78D60 /* InfoPlist.strings */,
 				38975A08187AB78B00C78D60 /* main.m */,
@@ -230,7 +242,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				38975A15187AB78B00C78D60 /* Images.xcassets in Resources */,
+				38DA9728187ACB2A003161C7 /* KollisionPlayerDown.png in Resources */,
+				38DA972A187ACB2A003161C7 /* Obstacle.png in Resources */,
+				38DA9729187ACB2A003161C7 /* KollisionPlayerUp.png in Resources */,
 				38975A07187AB78B00C78D60 /* InfoPlist.strings in Resources */,
+				38DA9727187ACB2A003161C7 /* KollisionBackGround.png in Resources */,
 				38975A10187AB78B00C78D60 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -461,6 +477,7 @@
 				38975A2D187AB78C00C78D60 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		38975A2E187AB78C00C78D60 /* Build configuration list for PBXNativeTarget "KollisionTests" */ = {
 			isa = XCConfigurationList;
@@ -469,6 +486,7 @@
 				38975A30187AB78C00C78D60 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -14,8 +14,34 @@
 
 @implementation KAIViewController
 
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    
+    if (Start == YES) {
+        
+        Intro1.hidden = YES;
+        Intro2.hidden = YES;
+        Intro3.hidden = YES;
+        
+        timer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(PlayerMove) userInfo:Nil repeats:YES];
+
+        Start = NO;
+        
+    }
+    
+    
+    
+}
+
+
+
+
+
 - (void)viewDidLoad
 {
+    Start = YES;
+    
+    
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }

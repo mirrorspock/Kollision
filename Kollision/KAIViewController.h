@@ -8,6 +8,27 @@
 
 #import <UIKit/UIKit.h>
 
+int Y;
+BOOL Start;
+
+
 @interface KAIViewController : UIViewController
+
+{
+    IBOutlet UILabel *Intro1;
+    IBOutlet UILabel *Intro2;
+    IBOutlet UILabel *Intro3;
+
+    IBOutlet UIImageView *Player;
+    
+    NSTimer *timer;
+    
+}
+
+-(void)PlayerMove;
+
+
+
+
 
 @end
