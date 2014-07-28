@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>54E579F7-FE2D-49DD-B466-B1467BD574B5</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Kollision</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>42DA7209-A14D-49C2-87CD-2B695D030451</key>
+		<string>https://github.com/mirrorspock/Kollision.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Kollision.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>42DA7209-A14D-49C2-87CD-2B695D030451</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/mirrorspock/Kollision.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>42DA7209-A14D-49C2-87CD-2B695D030451</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>42DA7209-A14D-49C2-87CD-2B695D030451</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Kollision</string>
+		</dict>
+	</array>
+</dict>
+</plist>
